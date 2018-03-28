@@ -51,17 +51,16 @@ const int stepLarge = 200;
 
 // == OBJECTS == //
 Stepper stepperMotor(stepsPerRevolution, STEPPER_IN1, STEPPER_IN2, STEPPER_IN3, STEPPER_IN4);
-MD07A launchMotor(DCMOTOR_DIR, DCMOTOR_PWMH, DCMOTOR_STBY);
+MD07A launchMotor(DCMOTOR_DIR, DCMOTOR_PWMH, DCMOTOR_RESET);
 
 void setup(){
   // Define all output pins
   pinMode(EMIT_FRONT, OUTPUT);
   pinMode(EMIT_SIDE, OUTPUT);
   pinMode(EMIT_REAR, OUTPUT);
-  pinMode(DCMOTOR_STBY, OUTPUT);
-  pinMode(DCMOTOR_IN1, OUTPUT);
-  pinMode(DCMOTOR_IN2, OUTPUT);
-  pinMode(DCMOTOR_PWM, OUTPUT);
+  pinMode(DCMOTOR_RESET, OUTPUT);
+  pinMode(DCMOTOR_PWMH, OUTPUT);
+  pinMode(DCMOTOR_DIR, OUTPUT);
   pinMode(STEPPER_IN1, OUTPUT);
   pinMode(STEPPER_IN2, OUTPUT);
   pinMode(STEPPER_IN3, OUTPUT);
